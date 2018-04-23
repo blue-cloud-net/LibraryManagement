@@ -40,6 +40,7 @@ namespace Common
             var builder = new ContainerBuilder();
             //格式：builder.RegisterType<xxxx>().As<Ixxxx>().InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(BaseDAL<>)).As(typeof(IBaseDAL<>)).InstancePerLifetimeScope();
+
             container = builder.Build();
         }
     }

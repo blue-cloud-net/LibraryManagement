@@ -45,7 +45,7 @@
         // 作者名
         public string AuthorName { get; set; }
         // 图书类型编号
-        public string BookTypeId { get; set; }
+        public int BookTypeId { get; set; }
     }
 
     /// <summary>

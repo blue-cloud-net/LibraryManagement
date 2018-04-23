@@ -1,6 +1,6 @@
-﻿using System.Data.Entity;
+﻿using Entity;
+using System.Data.Entity;
 using System.Runtime.Remoting.Messaging;
-using Entity;
 
 namespace DAL
 {
