@@ -1,7 +1,11 @@
-﻿
+
+using FantasySky.MongoDbCore.Factory;
+using FantasySky.MongoDbCore.Options;
+
 using Microsoft.Extensions.Options;
 
 using MongoDB.Driver;
+using MongoDB.Driver.Linq;
 
 namespace FantasySky.MongoDbCore;
 
@@ -23,8 +27,8 @@ public class MongoDbContext
         return _connection.Database.GetCollection<TDocument>(collectName ?? typeof(TDocument).Name);
     }
 
-    public IMongoCollection<TDocument> AsQuery<TDocument>(string? collectName = null)
+    public IMongoQueryable<TDocument> AsQueryable<TDocument>(string? collectName = null)
     {
-        return _connection.Database.GetCollection<TDocument>(collectName ?? typeof(TDocument).Name);
+        return this.Set<TDocument>(collectName).AsQueryable();
     }
 }

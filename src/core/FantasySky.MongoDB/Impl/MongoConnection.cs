@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+using FantasySky.MongoDbCore.Options;
+
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 using MongoDB.Bson;

@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 
 using MongoDB.Driver;
 
-namespace FantasySky.MongoDbCore;
+namespace FantasySky.MongoDbCore.Options;
 
 public class MongoOptions
 {
@@ -19,6 +19,6 @@ public class MongoOptions
 
     public void ConfigureMongoDB(IConfiguration configuration)
     {
-        Settings.LinqProvider =  MongoDB.Driver.Linq.LinqProvider.V3;
+        this.Settings.LinqProvider =  MongoDB.Driver.Linq.LinqProvider.V3;
     }
 }
