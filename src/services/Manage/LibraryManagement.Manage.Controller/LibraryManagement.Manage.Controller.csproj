@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\core\FantasySky.AspNetCore\FantasySky.AspNetCore.csproj" />
+	  <ProjectReference Include="..\LibraryManagement.Manage.Abstractions\LibraryManagement.Manage.Abstractions.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Extensions\" />
+	</ItemGroup>
+
+</Project>

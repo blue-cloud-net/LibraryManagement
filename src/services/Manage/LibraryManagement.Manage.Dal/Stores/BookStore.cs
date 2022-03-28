@@ -1,11 +1,11 @@
 using AutoMapper;
 
 using FantasySky.MongoDbCore;
-using FantasySky.MongoDbCore.Store;
+using FantasySky.MongoDbCore.Stores;
 
 using LibraryManagement.Manage.Dal.Entity;
 
-namespace LibraryManagement.Manage.Dal.Store;
+namespace LibraryManagement.Manage.Dal.Stores;
 
 public class BookStore : BaseStore<Book>
 {

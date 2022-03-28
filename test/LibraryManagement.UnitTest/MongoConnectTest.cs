@@ -10,7 +10,7 @@ namespace LibraryManagement.UnitTest;
 
 public class MongoConnectTest
 {
-    IServiceProvider _serviceProvider;
+    private readonly IServiceProvider _serviceProvider;
 
     public MongoConnectTest()
     {

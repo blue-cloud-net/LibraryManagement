@@ -1,5 +1,4 @@
-
-using FantasySky.MongoDbCore.Model;
+using FantasySky.MongoDbCore.Models;
 
 namespace LibraryManagement.Manage.Dal.Entity;
 
