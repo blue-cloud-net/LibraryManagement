@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using FantasySky.MongoDbCore.Factories;
+
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FantasySky.MongoDbCore;
 

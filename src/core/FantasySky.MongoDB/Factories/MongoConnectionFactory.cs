@@ -5,7 +5,7 @@ using FantasySky.MongoDbCore.Options;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace FantasySky.MongoDbCore.Factory;
+namespace FantasySky.MongoDbCore.Factories;
 
 public class MongoConnectionFactory
     {

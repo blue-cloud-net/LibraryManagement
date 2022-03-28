@@ -4,12 +4,12 @@ using AutoMapper;
 
 using FantasySky.Core.Persistence;
 using FantasySky.Core.Tools;
-using FantasySky.MongoDbCore.Model;
+using FantasySky.MongoDbCore.Models;
 
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 
-namespace FantasySky.MongoDbCore.Store;
+namespace FantasySky.MongoDbCore.Stores;
 
 public abstract class BaseStore<T> : IStore<T> where T : BaseEntity
 {

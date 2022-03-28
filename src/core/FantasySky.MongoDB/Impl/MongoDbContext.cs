@@ -1,5 +1,4 @@
-
-using FantasySky.MongoDbCore.Factory;
+using FantasySky.MongoDbCore.Factories;
 using FantasySky.MongoDbCore.Options;
 
 using Microsoft.Extensions.Options;

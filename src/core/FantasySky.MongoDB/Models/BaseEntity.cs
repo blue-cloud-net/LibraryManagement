@@ -3,7 +3,7 @@ using FantasySky.Core.Persistence;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace FantasySky.MongoDbCore.Model;
+namespace FantasySky.MongoDbCore.Models;
 
 public abstract class BaseEntity : IEntity
 {
