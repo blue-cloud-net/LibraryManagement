@@ -43,4 +43,5 @@ public class OperationalResult<TData> : OperationalResult
     public static OperationalResult<TData> Ok(TData data) => new(null, data);
     public static new OperationalResult<TData> Failed(string messgae) => new(OperationalState.Failed, default, messgae);
     public static new OperationalResult<TData> Error(Exception exception) => new(OperationalState.Error, default, exception.Message, exception);
+    public static OperationalResult<TData> NotSuccessLoad(OperationalResult result) => new(result.State, default, result.Message, result.Exception);
 }

@@ -1,3 +1,5 @@
+using FantasySky.Core.Models;
+
 namespace FantasySky.Core.Operation;
 
 public class Operational
