@@ -51,6 +51,18 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "vue-client", "src\client\vu
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "vue2-client", "src\client\vue2-client\vue2-client.njsproj", "{00353C3E-D196-4D85-821F-9D460B741560}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{1F6D5102-3F86-470E-900B-8DD34CDDFF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Authentication.Abstractions", "src\services\Authentication\LibraryManagement.Authentication.Abstractions\LibraryManagement.Authentication.Abstractions.csproj", "{3D972C5B-FE64-4847-A142-E8ABCDB4BE57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Authentication.Controller", "src\services\Authentication\LibraryManagement.Authentication.Controller\LibraryManagement.Authentication.Controller.csproj", "{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Authentication.DalService", "src\services\Authentication\LibraryManagement.Authentication.DalService\LibraryManagement.Authentication.DalService.csproj", "{30B8634B-EB95-4B62-A8C7-E768E8D42E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Authentication.Service", "src\services\Authentication\LibraryManagement.Authentication.Service\LibraryManagement.Authentication.Service.csproj", "{31A302CF-9844-4277-AD01-10246C6469DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Authentication.Web", "src\services\Authentication\LibraryManagement.Authentication.Web\LibraryManagement.Authentication.Web.csproj", "{C7C2CCBE-221E-4CBB-A371-4D44CBB24485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +115,26 @@ Global
 		{00353C3E-D196-4D85-821F-9D460B741560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00353C3E-D196-4D85-821F-9D460B741560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00353C3E-D196-4D85-821F-9D460B741560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D972C5B-FE64-4847-A142-E8ABCDB4BE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D972C5B-FE64-4847-A142-E8ABCDB4BE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D972C5B-FE64-4847-A142-E8ABCDB4BE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D972C5B-FE64-4847-A142-E8ABCDB4BE57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B8634B-EB95-4B62-A8C7-E768E8D42E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B8634B-EB95-4B62-A8C7-E768E8D42E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B8634B-EB95-4B62-A8C7-E768E8D42E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B8634B-EB95-4B62-A8C7-E768E8D42E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A302CF-9844-4277-AD01-10246C6469DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A302CF-9844-4277-AD01-10246C6469DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A302CF-9844-4277-AD01-10246C6469DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A302CF-9844-4277-AD01-10246C6469DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C2CCBE-221E-4CBB-A371-4D44CBB24485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C2CCBE-221E-4CBB-A371-4D44CBB24485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C2CCBE-221E-4CBB-A371-4D44CBB24485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C2CCBE-221E-4CBB-A371-4D44CBB24485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +157,12 @@ Global
 		{C97882D4-694D-4A69-B0DE-E58A755882DA} = {5DE5C489-4318-4B6F-8E20-1720AC3EDD0C}
 		{72EFC6B8-1920-4399-B646-25F3FABFFF41} = {4726AFC4-2B27-48B2-B3AD-8643FF5C20AC}
 		{00353C3E-D196-4D85-821F-9D460B741560} = {4726AFC4-2B27-48B2-B3AD-8643FF5C20AC}
+		{1F6D5102-3F86-470E-900B-8DD34CDDFF11} = {8FD10937-E5BD-4318-92BD-287B008AF8AE}
+		{3D972C5B-FE64-4847-A142-E8ABCDB4BE57} = {1F6D5102-3F86-470E-900B-8DD34CDDFF11}
+		{74F88EEE-1629-44A8-8D72-DCBCE9BB8B23} = {1F6D5102-3F86-470E-900B-8DD34CDDFF11}
+		{30B8634B-EB95-4B62-A8C7-E768E8D42E46} = {1F6D5102-3F86-470E-900B-8DD34CDDFF11}
+		{31A302CF-9844-4277-AD01-10246C6469DF} = {1F6D5102-3F86-470E-900B-8DD34CDDFF11}
+		{C7C2CCBE-221E-4CBB-A371-4D44CBB24485} = {1F6D5102-3F86-470E-900B-8DD34CDDFF11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C51C9804-B1DE-4DD9-9129-A656E24A576F}
