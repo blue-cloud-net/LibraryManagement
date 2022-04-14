@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\core\FantasySky.MongoDB\FantasySky.MongoDbCore.csproj" />
+    <ProjectReference Include="..\LibraryManagement.Authentication.Abstractions\LibraryManagement.Authentication.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mapping\" />
   </ItemGroup>
 
 </Project>
