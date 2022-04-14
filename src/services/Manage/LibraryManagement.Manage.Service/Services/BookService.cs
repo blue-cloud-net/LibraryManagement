@@ -4,7 +4,7 @@ using LibraryManagement.Manage.Abstractions.DalServices;
 using LibraryManagement.Manage.Abstractions.Models;
 using LibraryManagement.Manage.Abstractions.Services;
 
-namespace LibraryManagement.Manage.Service;
+namespace LibraryManagement.Manage.Service.Services;
 
 public class BookService : IBookService
 {
@@ -19,13 +19,13 @@ public class BookService : IBookService
     public Task<OperationalResult> AddAsync(
         Operational<BookModel> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return _dalBookService.AddAsync(operational, cancellationToken);   
     }
 
     public Task<OperationalResult> DeleteAsync(
         Operational<BookModel> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return _dalBookService.DeleteAsync(operational., cancellationToken);
     }
 
     public Task<OperationalResult<BookModel>> GetAsync(
@@ -43,6 +43,6 @@ public class BookService : IBookService
     public Task<OperationalResult> UpdateAsync(
         Operational<BookModel> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return _dalBookService.UpdateAsync(operational, cancellationToken);
     }
 }

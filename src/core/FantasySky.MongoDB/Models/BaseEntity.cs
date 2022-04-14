@@ -15,6 +15,16 @@ public abstract class BaseEntity : IEntity
 
     [BsonRequired]
     public DateTime CreatedTime { get; set; }
+    public string Creater { get; set; } = String.Empty;
+
     [BsonRequired]
     public DateTime ModifyTime { get; set; }
+
+    public string Modifier { get; set; } = String.Empty;
+
+    public bool IsDeleted { get; set; }
+
+    public DateTime? DeleteTime { get; set; }
+
+    public string? Deleter { get; set; }
 }

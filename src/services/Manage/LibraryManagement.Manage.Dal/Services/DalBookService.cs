@@ -24,14 +24,26 @@ public class DalBookService : IDalBookService
         _bookStore = bookStore;
     }
 
-    public Task<OperationalResult> AddAsync(Operational operational, CancellationToken cancellationToken = default)
+    public async Task<OperationalResult> AddAsync(Operational<BookModel> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var model = operational.Parameter;
+
+        var entity = _mapper.Map<BookModel, Book>(model);
+
+        var result = await _bookStore.AddAsync(entity, cancellationToken);
+
+        return result ? OperationalResult.Ok() : OperationalResult.Failed("");
     }
 
-    public Task<OperationalResult> DeleteAsync(Operational<string> operational, CancellationToken cancellationToken = default)
+    public async Task<OperationalResult> DeleteAsync(Operational<string> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var bookNo = operational.Parameter;
+
+        Expression<Func<Book, bool>> expression = p => p.No == bookNo;
+
+        var result = await _bookStore.DeleteAsync(expression, cancellationToken);
+
+        return result ? OperationalResult.Ok() : OperationalResult.Failed("");
     }
 
     public async Task<OperationalResult<BookModel>> GetAsync(Operational<BookQueryModel> operational, CancellationToken cancellationToken = default)
@@ -57,8 +69,16 @@ public class DalBookService : IDalBookService
         throw new NotImplementedException();
     }
 
-    public Task<OperationalResult> UpdateAsync(Operational<BookModel> operational, CancellationToken cancellationToken = default)
+    public async Task<OperationalResult> UpdateAsync(Operational<BookModel> operational, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var model = operational.Parameter;
+
+        var entity = _mapper.Map<BookModel, Book>(model);
+
+        Expression<Func<Book, bool>> expression = p => p.No == entity.No;
+
+        var result = await _bookStore.UpdateAsync(expression, entity, cancellationToken);
+
+        return result ? OperationalResult.Ok() : OperationalResult.Failed("");
     }
 }
